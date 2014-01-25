@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+           
+ 	<bean id="u" class="cn.dayutianfei.egret.api.impl.ServiceImpl"></bean>
+	<bean id="app" class="cn.dayutianfei.egret.App">
+		<property name="service" ref="u" /> <!-- set 注入 -->
+		<property name="name">
+			<!-- <ref bean="u" /> -->
+			<value>dayu</value>
+		</property>
+	</bean>
+</beans>
